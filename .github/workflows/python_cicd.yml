@@ -16,11 +16,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2  # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 
-    - name: Log in to Azure
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}  # Uses Azure credentials stored in GitHub secrets
-
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
